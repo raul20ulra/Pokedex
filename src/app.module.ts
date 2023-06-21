@@ -5,6 +5,7 @@ import { PokemonModule } from './pokemon/pokemon.module';
 import { Mongoose } from 'mongoose';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CommonModule } from './common/common.module';
+import { SeedModule } from './seed/seed.module';
 @Module({  
   imports: [    
     ServeStaticModule.forRoot({         
@@ -12,7 +13,8 @@ import { CommonModule } from './common/common.module';
         }), 
         MongooseModule.forRoot('mongodb+srv://Ginventario:psNlNH6m3Fs3P1eg@cluster0.ew52zkc.mongodb.net/'),
         PokemonModule,
-        CommonModule
+        CommonModule,
+        SeedModule
       ],
     })
     
